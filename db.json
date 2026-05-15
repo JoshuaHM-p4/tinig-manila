@@ -1,0 +1,585 @@
+{
+  "egovph_accounts": [
+    {
+      "id": "EGV-2025-001",
+      "name": "Rosa Dela Cruz",
+      "birthdate": "1952-01-20",
+      "birthdate_aliases": ["enero beinte", "enero 20", "january 20", "jan 20", "enero beynte"],
+      "phone": "+63917555204",
+      "address": "Batangas City, Batangas",
+      "barangay": "Barangay San Isidro",
+      "city": "Batangas City",
+      "region": "Region IV-A (CALABARZON)",
+      "preferred_language": "Tagalog",
+      "egovph_status": "VERIFIED",
+      "egovph_registered": true,
+      "egovph_registration_date": "2024-03-15",
+      "senior_citizen_id": "SC-2025-45821",
+      "senior_citizen_id_status": "ACTIVE",
+      "registered_services": [
+        "Senior Benefits",
+        "Health Assistance",
+        "Appointment Booking",
+        "Barangay Services"
+      ],
+      "emergency_contact": {
+        "name": "Maria Dela Cruz",
+        "relationship": "Anak",
+        "phone": "+63917555204"
+      }
+    },
+    {
+      "id": "EGV-2025-002",
+      "name": "Pedro Santos",
+      "birthdate": "1948-07-04",
+      "birthdate_aliases": ["hulyo apat", "july 4", "hulyo 4", "july four"],
+      "phone": "+63918123456",
+      "address": "Quezon City, Metro Manila",
+      "barangay": "Barangay Bagong Pag-asa",
+      "city": "Quezon City",
+      "region": "NCR",
+      "preferred_language": "Taglish",
+      "egovph_status": "VERIFIED",
+      "egovph_registered": true,
+      "egovph_registration_date": "2023-11-20",
+      "senior_citizen_id": "SC-2024-12345",
+      "senior_citizen_id_status": "ACTIVE",
+      "registered_services": [
+        "Senior Benefits",
+        "Health Assistance",
+        "Appointment Booking"
+      ],
+      "emergency_contact": {
+        "name": "Juan Santos",
+        "relationship": "Anak",
+        "phone": "+63918654321"
+      }
+    },
+    {
+      "id": "EGV-2025-003",
+      "name": "Nena Reyes",
+      "birthdate": "1955-12-08",
+      "birthdate_aliases": ["disyembre otso", "disyembre 8", "december 8", "dec 8"],
+      "phone": "+63919876543",
+      "address": "Marikina City, Metro Manila",
+      "barangay": "Barangay Concepcion",
+      "city": "Marikina City",
+      "region": "NCR",
+      "preferred_language": "Tagalog",
+      "egovph_status": "PENDING",
+      "egovph_registered": false,
+      "egovph_registration_date": null,
+      "senior_citizen_id": "SC-2025-78902",
+      "senior_citizen_id_status": "ACTIVE",
+      "registered_services": [
+        "Senior Benefits"
+      ],
+      "emergency_contact": {
+        "name": "Carlo Reyes",
+        "relationship": "Apo",
+        "phone": "+63919111222"
+      }
+    },
+    {
+      "id": "EGV-2025-004",
+      "name": "Ernesto Villanueva",
+      "birthdate": "1950-03-25",
+      "birthdate_aliases": ["marso beinte singko", "marso 25", "march 25", "march beinte singko"],
+      "phone": "+63920333444",
+      "address": "Caloocan City, Metro Manila",
+      "barangay": "Barangay 5",
+      "city": "Caloocan City",
+      "region": "NCR",
+      "preferred_language": "Taglish",
+      "egovph_status": "VERIFIED",
+      "egovph_registered": true,
+      "egovph_registration_date": "2024-06-01",
+      "senior_citizen_id": "SC-2025-33210",
+      "senior_citizen_id_status": "ACTIVE",
+      "registered_services": [
+        "Senior Benefits",
+        "Health Assistance",
+        "Barangay Services"
+      ],
+      "emergency_contact": {
+        "name": "Lita Villanueva",
+        "relationship": "Asawa",
+        "phone": "+63920555666"
+      }
+    }
+  ],
+
+  "senior_benefits": {
+    "EGV-2025-001": {
+      "account_id": "EGV-2025-001",
+      "eligibility_status": "ACTIVE",
+      "benefits_enrolled": [
+        {
+          "benefit_name": "Social Pension (DSWD)",
+          "amount_monthly": 1000,
+          "currency": "PHP",
+          "status": "AKTIBO",
+          "last_release_date": "2025-04-30",
+          "next_release_date": "2025-06-30",
+          "release_venue": "Barangay San Isidro Hall, Batangas City",
+          "release_schedule": "Tuwing katapusan ng buwan"
+        },
+        {
+          "benefit_name": "Senior Citizen Discount (20%)",
+          "status": "AKTIBO",
+          "applicable_to": ["Gamot", "Pagkain", "Transport", "Hospitalization"],
+          "id_required": "Senior Citizen ID"
+        },
+        {
+          "benefit_name": "Expanded Senior Citizens Act (ESCA) Benefits",
+          "status": "AKTIBO",
+          "includes": [
+            "Priority lane sa lahat ng opisina ng gobyerno",
+            "Libreng bakuna",
+            "Medical and dental assistance"
+          ]
+        }
+      ],
+      "senior_citizen_id_details": {
+        "id_number": "SC-2025-45821",
+        "issued_by": "Office for Senior Citizens Affairs (OSCA) — Batangas City",
+        "date_issued": "2025-01-10",
+        "validity": "Lifetime",
+        "status": "AKTIBO"
+      },
+      "one_time_assistance": {
+        "status": "NAILABAS NA",
+        "amount": 5000,
+        "date_released": "2025-02-14",
+        "program": "AICS (Assistance to Individuals in Crisis Situation)"
+      }
+    },
+    "EGV-2025-002": {
+      "account_id": "EGV-2025-002",
+      "eligibility_status": "ACTIVE",
+      "benefits_enrolled": [
+        {
+          "benefit_name": "Social Pension (DSWD)",
+          "amount_monthly": 1000,
+          "currency": "PHP",
+          "status": "AKTIBO",
+          "last_release_date": "2025-04-30",
+          "next_release_date": "2025-06-30",
+          "release_venue": "Barangay Bagong Pag-asa Hall, Quezon City",
+          "release_schedule": "Tuwing katapusan ng buwan"
+        },
+        {
+          "benefit_name": "Senior Citizen Discount (20%)",
+          "status": "AKTIBO",
+          "applicable_to": ["Gamot", "Pagkain", "Transport", "Hospitalization"],
+          "id_required": "Senior Citizen ID"
+        }
+      ],
+      "senior_citizen_id_details": {
+        "id_number": "SC-2024-12345",
+        "issued_by": "OSCA — Quezon City",
+        "date_issued": "2023-12-01",
+        "validity": "Lifetime",
+        "status": "AKTIBO"
+      }
+    },
+    "EGV-2025-003": {
+      "account_id": "EGV-2025-003",
+      "eligibility_status": "ACTIVE",
+      "benefits_enrolled": [
+        {
+          "benefit_name": "Social Pension (DSWD)",
+          "amount_monthly": 1000,
+          "currency": "PHP",
+          "status": "NAGHIHINTAY",
+          "note": "Kailangan munang ma-verify ang eGovPH account bago mailabas ang pension."
+        },
+        {
+          "benefit_name": "Senior Citizen Discount (20%)",
+          "status": "AKTIBO",
+          "applicable_to": ["Gamot", "Pagkain", "Transport"],
+          "id_required": "Senior Citizen ID"
+        }
+      ],
+      "senior_citizen_id_details": {
+        "id_number": "SC-2025-78902",
+        "issued_by": "OSCA — Marikina City",
+        "date_issued": "2025-03-01",
+        "validity": "Lifetime",
+        "status": "AKTIBO"
+      }
+    },
+    "EGV-2025-004": {
+      "account_id": "EGV-2025-004",
+      "eligibility_status": "ACTIVE",
+      "benefits_enrolled": [
+        {
+          "benefit_name": "Social Pension (DSWD)",
+          "amount_monthly": 1000,
+          "currency": "PHP",
+          "status": "AKTIBO",
+          "last_release_date": "2025-04-30",
+          "next_release_date": "2025-06-30",
+          "release_venue": "Barangay 5 Hall, Caloocan City",
+          "release_schedule": "Tuwing katapusan ng buwan"
+        },
+        {
+          "benefit_name": "Senior Citizen Discount (20%)",
+          "status": "AKTIBO",
+          "applicable_to": ["Gamot", "Pagkain", "Transport", "Hospitalization"],
+          "id_required": "Senior Citizen ID"
+        }
+      ],
+      "senior_citizen_id_details": {
+        "id_number": "SC-2025-33210",
+        "issued_by": "OSCA — Caloocan City",
+        "date_issued": "2024-07-15",
+        "validity": "Lifetime",
+        "status": "AKTIBO"
+      }
+    }
+  },
+
+  "health_services": {
+    "EGV-2025-001": {
+      "account_id": "EGV-2025-001",
+      "nearest_health_centers": [
+        {
+          "name": "Batangas City Health Center – Main",
+          "address": "P. Burgos St., Batangas City",
+          "phone": "(043) 980-1234",
+          "services": ["OPD", "Bakuna", "Dental", "Prenatal", "Senior Wellness"],
+          "operating_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+          "distance_km": 1.2
+        },
+        {
+          "name": "San Isidro Barangay Health Station",
+          "address": "Barangay San Isidro, Batangas City",
+          "phone": "(043) 980-5678",
+          "services": ["Basic OPD", "Bakuna", "BP Monitoring"],
+          "operating_hours": "Lunes – Biyernes, 8:00 AM – 12:00 PM",
+          "distance_km": 0.3
+        }
+      ],
+      "last_checkup": {
+        "date": "2025-03-15",
+        "facility": "Batangas City Health Center – Main",
+        "attending_physician": "Dr. Maria Santos",
+        "diagnosis": "Hypertension – controlled",
+        "prescribed_medicines": ["Amlodipine 5mg", "Losartan 50mg"],
+        "next_checkup_due": "2025-06-15"
+      },
+      "active_prescriptions": [
+        {
+          "medicine": "Amlodipine 5mg",
+          "dosage": "1 tablet tuwing umaga",
+          "refill_available": true,
+          "pharmacy": "Botika ng Barangay – San Isidro"
+        },
+        {
+          "medicine": "Losartan 50mg",
+          "dosage": "1 tablet tuwing gabi",
+          "refill_available": true,
+          "pharmacy": "Botika ng Barangay – San Isidro"
+        }
+      ],
+      "vaccinations": [
+        { "vaccine": "Flu Vaccine", "date": "2024-10-01", "status": "KUMPLETO" },
+        { "vaccine": "Pneumococcal Vaccine", "date": "2024-10-01", "status": "KUMPLETO" },
+        { "vaccine": "COVID-19 Booster", "date": "2024-08-15", "status": "KUMPLETO" }
+      ]
+    },
+    "EGV-2025-002": {
+      "account_id": "EGV-2025-002",
+      "nearest_health_centers": [
+        {
+          "name": "Quezon City Health Center – Bagong Pag-asa",
+          "address": "Commonwealth Ave., Quezon City",
+          "phone": "(02) 8441-1234",
+          "services": ["OPD", "Bakuna", "Dental", "Senior Wellness"],
+          "operating_hours": "Lunes – Biyernes, 7:00 AM – 5:00 PM",
+          "distance_km": 0.8
+        }
+      ],
+      "last_checkup": {
+        "date": "2025-02-20",
+        "facility": "QC Health Center – Bagong Pag-asa",
+        "attending_physician": "Dr. Jose Reyes",
+        "diagnosis": "Diabetes Type 2 – monitoring",
+        "next_checkup_due": "2025-05-20"
+      }
+    },
+    "EGV-2025-003": {
+      "account_id": "EGV-2025-003",
+      "nearest_health_centers": [
+        {
+          "name": "Marikina City Health Center",
+          "address": "J.P. Rizal Ave., Marikina City",
+          "phone": "(02) 8647-5678",
+          "services": ["OPD", "Bakuna", "Senior Wellness"],
+          "operating_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+          "distance_km": 1.5
+        }
+      ],
+      "last_checkup": null
+    },
+    "EGV-2025-004": {
+      "account_id": "EGV-2025-004",
+      "nearest_health_centers": [
+        {
+          "name": "Caloocan City Health Center – District 1",
+          "address": "10th Ave., Caloocan City",
+          "phone": "(02) 8366-9012",
+          "services": ["OPD", "Bakuna", "Dental", "Senior Wellness"],
+          "operating_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+          "distance_km": 1.0
+        }
+      ],
+      "last_checkup": {
+        "date": "2025-04-01",
+        "facility": "Caloocan City Health Center – District 1",
+        "attending_physician": "Dr. Ana Mendoza",
+        "diagnosis": "Arthritis – managed",
+        "next_checkup_due": "2025-07-01"
+      }
+    }
+  },
+
+  "appointment_booking": {
+    "EGV-2025-001": {
+      "account_id": "EGV-2025-001",
+      "upcoming_appointments": [
+        {
+          "appointment_id": "APT-20250615-001",
+          "type": "Senior Wellness Checkup",
+          "facility": "Batangas City Health Center – Main",
+          "date": "2025-06-15",
+          "time": "9:00 AM",
+          "status": "NAKUMPIRMA",
+          "attending_physician": "Dr. Maria Santos",
+          "instructions": "Magdala ng Senior Citizen ID at listahan ng gamot."
+        },
+        {
+          "appointment_id": "APT-20250620-002",
+          "type": "Flu Vaccine (Annual)",
+          "facility": "San Isidro Barangay Health Station",
+          "date": "2025-06-20",
+          "time": "8:30 AM",
+          "status": "NAKUMPIRMA",
+          "instructions": "Walk-in. Magdala ng vaccination card."
+        }
+      ],
+      "past_appointments": [
+        {
+          "appointment_id": "APT-20250315-001",
+          "type": "Quarterly Checkup",
+          "facility": "Quezon City Health Center",
+          "date": "2025-03-15",
+          "status": "NATAPOS",
+          "notes": "Blood pressure: 130/85. Gamot ay ipinagpatuloy."
+        }
+      ],
+      "available_slots": [
+        {
+          "facility": "Batangas City Health Center – Main",
+          "service": "BP Monitoring / Senior Wellness",
+          "available_dates": ["2025-06-18", "2025-06-19", "2025-06-25"],
+          "booking_method": "Tawagan ang (043) 980-1234 o bisitahin ang eGovPH app"
+        }
+      ]
+    },
+    "EGV-2025-002": {
+      "account_id": "EGV-2025-002",
+      "upcoming_appointments": [
+        {
+          "appointment_id": "APT-20250520-001",
+          "type": "Diabetes Monitoring",
+          "facility": "QC Health Center – Bagong Pag-asa",
+          "date": "2025-05-20",
+          "time": "10:00 AM",
+          "status": "NAKUMPIRMA",
+          "instructions": "Huwag kumain bago mag-checkup. Magdala ng gamot."
+        }
+      ],
+      "past_appointments": [],
+      "available_slots": []
+    },
+    "EGV-2025-003": {
+      "account_id": "EGV-2025-003",
+      "upcoming_appointments": [],
+      "past_appointments": [],
+      "available_slots": [
+        {
+          "facility": "Marikina City Health Center",
+          "service": "Senior Wellness / OPD",
+          "available_dates": ["2025-06-10", "2025-06-11", "2025-06-12"],
+          "booking_method": "Tumawag sa (02) 8647-5678"
+        }
+      ]
+    },
+    "EGV-2025-004": {
+      "account_id": "EGV-2025-004",
+      "upcoming_appointments": [
+        {
+          "appointment_id": "APT-20250701-001",
+          "type": "Arthritis Follow-up",
+          "facility": "Caloocan City Health Center – District 1",
+          "date": "2025-07-01",
+          "time": "8:00 AM",
+          "status": "NAKUMPIRMA",
+          "instructions": "Magdala ng X-ray results at listahan ng gamot."
+        }
+      ],
+      "past_appointments": [],
+      "available_slots": []
+    }
+  },
+
+  "barangay_services": {
+    "EGV-2025-001": {
+      "account_id": "EGV-2025-001",
+      "barangay": "Barangay San Isidro",
+      "city": "Batangas City",
+      "barangay_captain": "Hon. Ricardo Santos",
+      "barangay_hall_address": "San Isidro, Batangas City",
+      "barangay_hall_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+      "barangay_hall_phone": "(043) 721-0001",
+      "available_services": [
+        {
+          "service": "Barangay Clearance",
+          "processing_time": "1 araw",
+          "requirements": ["Sertipiko ng Residensya", "1 valid ID", "2x2 na litrato"],
+          "fee": "PHP 50.00",
+          "availability": "Walk-in o may appointment",
+          "schedule": "Lunes – Biyernes"
+        },
+        {
+          "service": "Certificate of Indigency",
+          "processing_time": "1 araw",
+          "requirements": ["Valid ID", "Patunay ng tirahan"],
+          "fee": "Libre para sa mga senior citizen",
+          "availability": "Walk-in"
+        },
+        {
+          "service": "Barangay Protection Order",
+          "processing_time": "Agad (emergensya)",
+          "requirements": ["Pumasok sa Barangay Hall"],
+          "fee": "Libre",
+          "availability": "24 oras para sa emergensya"
+        },
+        {
+          "service": "Senior Citizen ID Renewal",
+          "processing_time": "3-5 araw",
+          "requirements": ["Lumang Senior Citizen ID", "1x1 litrato", "Birth Certificate"],
+          "fee": "Libre",
+          "availability": "Walk-in",
+          "where": "OSCA Office, Batangas City Hall"
+        }
+      ],
+      "upcoming_barangay_events": [
+        {
+          "event": "Libreng Medical Mission para sa mga Senior",
+          "date": "2025-06-22",
+          "time": "8:00 AM – 12:00 PM",
+          "venue": "Barangay San Isidro Basketball Court",
+          "services": ["BP monitoring", "Blood sugar check", "Free medicines", "Dental check"]
+        }
+      ]
+    },
+    "EGV-2025-002": {
+      "account_id": "EGV-2025-002",
+      "barangay": "Barangay Bagong Pag-asa",
+      "city": "Quezon City",
+      "barangay_captain": "Hon. Melissa Cruz",
+      "barangay_hall_address": "Bagong Pag-asa, Quezon City",
+      "barangay_hall_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+      "barangay_hall_phone": "(02) 8441-0002",
+      "available_services": [
+        {
+          "service": "Barangay Clearance",
+          "processing_time": "1 araw",
+          "requirements": ["Valid ID", "Proof of Residency"],
+          "fee": "PHP 100.00",
+          "availability": "Walk-in o may appointment"
+        }
+      ],
+      "upcoming_barangay_events": []
+    },
+    "EGV-2025-003": {
+      "account_id": "EGV-2025-003",
+      "barangay": "Barangay Concepcion",
+      "city": "Marikina City",
+      "barangay_captain": "Hon. Antonio Flores",
+      "barangay_hall_address": "Concepcion, Marikina City",
+      "barangay_hall_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+      "barangay_hall_phone": "(02) 8647-0003",
+      "available_services": [
+        {
+          "service": "Barangay Clearance",
+          "processing_time": "1 araw",
+          "requirements": ["Valid ID", "Proof of Residency"],
+          "fee": "PHP 80.00",
+          "availability": "Walk-in"
+        }
+      ],
+      "upcoming_barangay_events": []
+    },
+    "EGV-2025-004": {
+      "account_id": "EGV-2025-004",
+      "barangay": "Barangay 5",
+      "city": "Caloocan City",
+      "barangay_captain": "Hon. Roberto Luna",
+      "barangay_hall_address": "Barangay 5, Caloocan City",
+      "barangay_hall_hours": "Lunes – Biyernes, 8:00 AM – 5:00 PM",
+      "barangay_hall_phone": "(02) 8366-0004",
+      "available_services": [
+        {
+          "service": "Barangay Clearance",
+          "processing_time": "1 araw",
+          "requirements": ["Valid ID", "Proof of Residency"],
+          "fee": "PHP 75.00",
+          "availability": "Walk-in o may appointment"
+        }
+      ],
+      "upcoming_barangay_events": [
+        {
+          "event": "Livelihood Training para sa mga Senior",
+          "date": "2025-06-28",
+          "time": "9:00 AM",
+          "venue": "Barangay 5 Covered Court",
+          "services": ["Free skills training", "Certificate of completion"]
+        }
+      ]
+    }
+  },
+
+  "egovph_info": {
+    "about": "Ang eGovPH ay ang opisyal na Super App ng pamahalaan ng Pilipinas na nagbibigay ng access sa mahigit 70 serbisyong pang-gobyerno sa iisang platform.",
+    "how_to_register": [
+      "I-download ang eGovPH app sa Google Play Store o Apple App Store.",
+      "Mag-sign up gamit ang inyong email address o mobile number.",
+      "I-verify ang inyong pagkakakilanlan gamit ang inyong PSA Birth Certificate o valid ID.",
+      "Kumpletuhin ang inyong profile at i-link ang inyong mga government IDs.",
+      "Maaari na kayong gumamit ng inyong eGovPH account para sa lahat ng serbisyo."
+    ],
+    "available_services_count": 70,
+    "key_services": [
+      "SSS – Social Security Records",
+      "PhilHealth – Health Insurance",
+      "Pag-IBIG – Housing Fund",
+      "DFA – Passport Application",
+      "LTO – Driver's License",
+      "BIR – Tax Records",
+      "DSWD – Social Welfare Benefits",
+      "DOH – Health Services",
+      "CHED – Educational Records",
+      "NBI Clearance",
+      "PNP – Police Clearance",
+      "PSA – Civil Registry (Birth/Marriage/Death Certificates)",
+      "Senior Citizen Benefits (OSCA)"
+    ],
+    "hotline": "1-888 (eGovPH Help Desk)",
+    "website": "https://egovph.gov.ph",
+    "for_seniors_note": "Para sa mga hindi makapag-download ng app, ang Tinig Manila ay narito upang tulungan kayong ma-access ang inyong eGovPH account at serbisyo sa pamamagitan lamang ng isang tawag."
+  }
+}
