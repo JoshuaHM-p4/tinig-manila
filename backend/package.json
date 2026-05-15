@@ -1,0 +1,37 @@
+{
+  "name": "tinig-manila",
+  "version": "1.0.0",
+  "description": "Toll-Free AI Voice Hotline for Filipino Senior Citizens",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "groq-sdk": "^0.9.1",
+    "socket.io": "^4.7.5",
+    "twilio": "^5.3.3",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "twilio",
+    "groq",
+    "tagalog",
+    "ai",
+    "voice",
+    "philippines",
+    "senior-citizens",
+    "egovph"
+  ],
+  "author": "Tinig Manila Team",
+  "license": "MIT"
+}
