@@ -2,6 +2,31 @@
 
 require('dotenv').config();
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Optional TLS-verification bypass for corporate/campus networks that perform
+// SSL interception (the original symptom we hit during the hackathon).
+//
+// This is OFF by default. To enable it during local development, set
+//   ALLOW_INSECURE_TLS=true
+// in backend/.env. It is *force-disabled* whenever NODE_ENV=production so it
+// can never silently ship.
+// ─────────────────────────────────────────────────────────────────────────────
+if (
+  process.env.ALLOW_INSECURE_TLS === 'true' &&
+  process.env.NODE_ENV !== 'production'
+) {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  console.warn(
+    '⚠  ALLOW_INSECURE_TLS=true — TLS certificate verification is DISABLED. ' +
+      'Use only for local development on networks with SSL interception.',
+  );
+} else if (process.env.ALLOW_INSECURE_TLS === 'true') {
+  console.warn(
+    '⚠  ALLOW_INSECURE_TLS=true was ignored because NODE_ENV=production. ' +
+      'TLS verification remains enabled.',
+  );
+}
+
 const express = require('express');
 const http = require('http');
 const { Server: SocketIOServer } = require('socket.io');
@@ -390,8 +415,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); // required for Twilio webhooks
 
-// Serve static files from project root (for index.html / dashboard.html later)
-app.use(express.static(path.join(__dirname)));
+// Serve the built React dashboard (frontend/dist) if it exists.
+// In dev, the Vite dev server runs separately on http://localhost:5173.
+const FRONTEND_DIST = path.join(__dirname, '..', 'frontend', 'dist');
+if (fs.existsSync(FRONTEND_DIST)) {
+  app.use(express.static(FRONTEND_DIST));
+}
 
 // ─────────────────────────────────────────────
 // Health check
@@ -655,6 +684,32 @@ app.get('/api/db/reload', (_req, res) => {
     res.status(500).json({ ok: false, error: err.message });
   }
 });
+
+// ─────────────────────────────────────────────
+// SPA fallback — serve index.html for any non-API GET so React Router
+// (BrowserRouter) can handle deep links and page refreshes in production.
+// Only registered when a built frontend exists; otherwise dev requests
+// fall through to Express's default 404 as before.
+// ─────────────────────────────────────────────
+
+if (fs.existsSync(FRONTEND_DIST)) {
+  const INDEX_HTML = path.join(FRONTEND_DIST, 'index.html');
+
+  app.get('*', (req, res, next) => {
+    // Never shadow API, Twilio webhooks, WebSocket upgrade, or health endpoints.
+    if (
+      req.path.startsWith('/api/') ||
+      req.path.startsWith('/twilio/') ||
+      req.path.startsWith('/socket.io/') ||
+      req.path === '/health'
+    ) {
+      return next();
+    }
+    res.sendFile(INDEX_HTML, (err) => {
+      if (err) next(err);
+    });
+  });
+}
 
 // ─────────────────────────────────────────────
 // WebSocket connection handling

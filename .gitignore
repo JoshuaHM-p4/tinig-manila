@@ -1,27 +1,39 @@
-# ── Secrets — NEVER commit ─────────────────────────────────
-.env
-.env.local
-.env.*.local
-
-# ── Node ───────────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Node / npm
+# ─────────────────────────────────────────────
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 .npm/
 .pnp.*
 
-# ── OS / Editor ────────────────────────────────────────────
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
-*.swo
+# ─────────────────────────────────────────────
+# Environment
+# ─────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
 
-# ── Build / runtime ────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Build outputs
+# ─────────────────────────────────────────────
+frontend/dist/
+frontend/.vite/
 dist/
 build/
 coverage/
-*.log
 .nyc_output/
+*.log
+
+# ─────────────────────────────────────────────
+# Editor / OS
+# ─────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
