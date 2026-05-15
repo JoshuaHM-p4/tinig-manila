@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   Base
+───────────────────────────────────────────── */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply font-sans antialiased text-ink bg-cream-50;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(168, 213, 240, 0.35) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(252, 209, 22, 0.18) 0px, transparent 45%),
+      radial-gradient(at 100% 100%, rgba(206, 17, 38, 0.10) 0px, transparent 45%);
+    background-attachment: fixed;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-ink;
+  }
+  ::selection {
+    background: #fcd116;
+    color: #0e1b2c;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(14, 27, 44, 0.18);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(14, 27, 44, 0.32);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Components
+───────────────────────────────────────────── */
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-sky-100 shadow-soft;
+  }
+  .card-flat {
+    @apply bg-white rounded-2xl border border-sky-100;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+  .chip-blue {
+    @apply chip bg-sky-100 text-flag-blue;
+  }
+  .chip-red {
+    @apply chip bg-red-50 text-flag-red;
+  }
+  .chip-yellow {
+    @apply chip bg-yellow-50 text-yellow-800;
+  }
+  .chip-green {
+    @apply chip bg-emerald-50 text-emerald-700;
+  }
+  .chip-slate {
+    @apply chip bg-slate-100 text-slate-700;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl
+           font-semibold text-sm transition-all duration-150 select-none
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-flag-blue/40
+           active:translate-y-px;
+  }
+  .btn-primary {
+    @apply btn bg-flag-blue text-white shadow-soft hover:bg-flag-blue-deep;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-flag-blue border border-sky-200 hover:bg-sky-50;
+  }
+  .btn-ghost {
+    @apply btn text-ink-soft hover:bg-sky-100/60;
+  }
+  .btn-pixel {
+    @apply btn bg-flag-yellow text-ink border-2 border-ink shadow-pixel-sm
+           hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-pixel
+           active:shadow-none active:translate-x-[2px] active:translate-y-[2px]
+           font-pixel text-[10px] uppercase tracking-wider;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
+           text-ink-soft hover:bg-white hover:text-flag-blue transition-colors;
+  }
+  .nav-link-active {
+    @apply bg-flag-blue text-white shadow-soft hover:bg-flag-blue hover:text-white;
+  }
+
+  /* Decorative Philippine-flag accent stripe */
+  .flag-stripe {
+    background: linear-gradient(
+      90deg,
+      #0038a8 0%,
+      #0038a8 33%,
+      #ce1126 33%,
+      #ce1126 66%,
+      #fcd116 66%,
+      #fcd116 100%
+    );
+  }
+
+  /* Pixel-art friendly image rendering */
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Utilities
+───────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+}
